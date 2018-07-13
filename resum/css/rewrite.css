@@ -1,0 +1,53 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body {
+    color: #fff;
+    background-color: #000;
+    margin: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.TopNavBar {
+    margin: 20px 16px;
+}
+.TopNavBar .logo {
+    font-size: 24px;
+    font-family: "Arial Black";
+    padding: 4px 0 3px ;
+}
+.TopNavBar > .logo > .rs {
+    color: #e6686a;
+}
+.TopNavBar > .logo > .card {
+    color: #9a9da2;
+    margin-left: 4px;
+}
+.TopNavBar > nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.TopNavBar > nav > ul > li {
+    float: left;
+    margin: 10px 17px 0px; 
+   
+}
+.TopNavBar > nav > ul > li > a {
+    color:#b7b7b7;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    padding: 0 0 8px;
+    display: block;
+    
+} 
+.TopNavBar > nav > ul > li > a:hover {
+    border-bottom-color: #dc6465; 
+}
