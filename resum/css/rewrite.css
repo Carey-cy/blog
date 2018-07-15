@@ -79,7 +79,7 @@ main .user-card {
     background-color: #fff;
 }
 .user-card .picture-text {
-    padding:58px 50px 44px;  
+    padding:50px; 
 }
 .user-card  .picture {
     float: left;
