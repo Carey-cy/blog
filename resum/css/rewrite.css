@@ -4,40 +4,49 @@
     clear: both;
 }
 body {
-    color: #fff;
-    background-color: #000;
+    background-color: #efefef;
+}
+* {
     margin: 0;
+    padding: 0;
 }
 a {
     color: inherit;
     text-decoration: none;
 }
 .TopNavBar {
-    margin: 20px 16px;
+    margin: 20px 0px;
+    position: fixed;    /*加了这个之后，这一个盒子就塌缩，我们只能添加一个宽度 */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.TopNavBar-inner {
+    margin: 0 16px;
 }
 .TopNavBar .logo {
     font-size: 24px;
     font-family: "Arial Black";
     padding: 4px 0 3px ;
 }
-.TopNavBar > .logo > .rs {
+.TopNavBar  .logo > .rs {
     color: #e6686a;
 }
-.TopNavBar > .logo > .card {
+.TopNavBar  .logo > .card {
     color: #9a9da2;
     margin-left: 4px;
 }
-.TopNavBar > nav > ul {
+.TopNavBar  nav > ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.TopNavBar > nav > ul > li {
+.TopNavBar  nav > ul > li {
     float: left;
     margin: 10px 17px 0px; 
    
 }
-.TopNavBar > nav > ul > li > a {
+.TopNavBar  nav > ul > li > a {
     color:#b7b7b7;
     font-size: 12px;
     font-weight: 700;
@@ -48,6 +57,100 @@ a {
     display: block;
     
 } 
-.TopNavBar > nav > ul > li > a:hover {
+.TopNavBar  nav > ul > li > a:hover {
     border-bottom-color: #dc6465; 
 }
+.banner {
+    height: 515px;
+    background-image: url(../images/bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.banner .mask {
+    height: 515px;
+    background-color: #000;
+    background: rgba(0,0,0,0.7);
+}   
+/* 下面是user-card */
+main .user-card {
+    max-width: 940px;
+    /* border: 1px solid red;   */
+    margin: 0 auto;
+    background-color: #fff;
+}
+.user-card .picture-text {
+    margin:58px 50px 44px;  
+}
+.user-card  .picture {
+    float: left;
+}
+.user-card .text  {
+    float: left;
+    margin-left: 65px;
+    width: 474px; /* 能不写宽就不写，这里不写hr就由于float塌缩了 */
+}
+.user-card .text .profile .welcome {
+    color: #fff;
+    background-color: #e6686a;
+    padding: 4px 10px;
+    line-height: 22px;
+    display : inline-block;
+    position: relative;  /*绝对定位用 */
+}
+.user-card .text .profile .triangle {
+    width: 0px;
+ /*  height: 0px;  这里可以不写，但是width=0不写，就会默认占满一行了  */  
+  border:10px solid transparent ;
+  border-top-width:0px;
+  border-left-color: #e6686a; 
+  position: absolute;
+  top: 100%;
+  left: 4px;
+  display: block;
+}
+.user-card .text h1,p,dl>dt{
+    color: #3d4451;
+}
+.user-card .text h1{
+    padding: 28px 0 6px;
+}
+.user-card .text hr {
+    margin: 20px 0;
+    color: #9da0a7;
+}
+.user-card .text dl > dt ,
+.user-card .text dl > dd {
+    float: left;
+    padding: 5px 0 ;
+}
+.user-card .text dl > dt {
+    font-weight: 700;
+    width: 30%;
+}
+.user-card .text dl > dd {
+    color: #9da0a7;
+    width: 70%;
+}
+.user-card .media {
+    background-color: #E6686A;
+    text-align: center;
+}
+.user-card .media > a {
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    /* border:1px solid black; */
+    border-radius: 50%;
+    padding: 5px 0;
+    margin: 16px;
+}
+.user-card .media > a:hover {
+    background: #CF5D5F;
+}
+.user-card .media svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    vertical-align: top;
+}
+

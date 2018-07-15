@@ -6,57 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>陈杨的简历</title>
     <link rel="stylesheet" href="css/rewrite.css">
+    <script src="//at.alicdn.com/t/font_748463_3twwggz8e3a.js"></script>
+    <style type="text/css">
+        .icon {
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-    <div class="TopNavBar clearfix">
-        <a class="logo" href="#" alt="logo" style="float: left;">
-            <span class="rs">RS</span><span class="card">card</span>
-        </a>
-        <nav style="float: right;">  <!--这里是导航栏，英文：navigation bar,所以我们用nav来划分 -->
-            <ul class="clearfix" >
-                <li><a href="#">关于</a></li>
-                <li><a href="#">技能</a></li>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">博客</a></li>
-                <li><a href="#">日历</a></li>
-                <li><a href="#">联系方式</a></li>
-                <li><a href="#">其他</a></li>
-            </ul>
-        </nav>
+    <div class="TopNavBar ">
+        <div class="TopNavBar-inner clearfix">
+            <a class="logo" href="#" alt="logo" style="float: left;">
+                <span class="rs">RS</span><span class="card">card</span>
+            </a>
+            <nav style="float: right;">  <!--这里是导航栏，英文：navigation bar,所以我们用nav来划分 -->
+                <ul class="clearfix" >
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">技能</a></li>
+                    <li><a href="#">作品</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">日历</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="banner" style="background-image:url(#)"></div>
-    <main>
-        <div class="card">  
-            <div class="picture">
-                <img src="" alt="头像">     <!--命名时记得用是什么来命名 -->
+    <div class="banner" >
+        <div class="mask"></div>
+    </div>
+     <main>      <!--这是主体card -->
+        <div class="user-card">  
+            <div class="picture-text clearfix">
+                <div class="picture ">
+                    <img src="images/avatar.jpg" alt="头像" height="347" width="299">     <!--命名时记得用是什么来命名 -->
+                </div>
+                <div class="text">
+                    <div class="profile">
+                        <span class="welcome">HELLO
+                            <span class="triangle"></span>
+                        </span>
+                        <h1>陈杨</h1>
+                        <p>前端开发</p>
+                        <hr>
+                        <dl>
+                            <dt>年龄</dt>
+                            <dd>23</dd>
+                            <dt>所在城市</dt>
+                            <dd>济南</dd>
+                            <dt>邮箱</dt>
+                            <dd>changanazai@163.com</dd>
+                            <dt>手机</dt>
+                            <dd>13153009717</dd>
+                        </dl>
+                    </div> 
+                </div>
             </div>
-            <div class="text">
-                <div class="profile">
-                    <span class="welcome">Hello</span>
-                    <h1>陈杨</h1>
-                    <p>前端开发</p>
-                    <hr>
-                    <dl>
-                        <dt>年龄</dt>
-                        <dd>23</dd>
-                        <dt>所在城市</dt>
-                        <dd>济南</dd>
-                        <dt>邮箱</dt>
-                        <dd>changanazai@163.com</dd>
-                        <dt>手机</dt>
-                        <dd>13153009717</dd>
-                    </dl>
-                </div> 
                 <footer class="media">
-                    <a href="#"><img src="" alt="..."></a>
-                    <a href="#"><img src="" alt="..."></a>
-                    <a href="#"><img src="" alt="..."></a>
-                    <a href="#"><img src="" alt="..."></a>
-                    <a href="#"><img src="" alt="..."></a>
-                    <a href="#"><img src="" alt="..."></a>
-                    <a href="#"><img src="" alt="..."></a>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weibo"></use>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                    </a>
                 </footer>
-            </div>
         </div> 
         <a href="button">下载PDF简历</a>
         <p>一段自我简介</p>
