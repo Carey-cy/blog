@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>陈杨的简历</title>
     <link rel="stylesheet" href="css/rewrite.css">
-    <script src="//at.alicdn.com/t/font_748463_3twwggz8e3a.js"></script>
+    <script src="//at.alicdn.com/t/font_748463_rabqz5ptpc.js"></script>
     <style type="text/css">
         .icon {
            width: 1em; height: 1em;
@@ -81,35 +81,105 @@
                             <use xlink:href="#icon-twitter"></use>
                         </svg>
                     </a>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zhihu-circle-fill"></use>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-jianshu_circle"></use>
+                        </svg>
+                    </a>
                 </footer>
         </div> 
-        <a href="button">下载PDF简历</a>
-        <p>一段自我简介</p>
+        <p class="profileDownload-wrapper">
+            <a href="resume.pdf" download class="profileDownload">下载PDF简历</a>
+        </p>
+        <p class="selfIntroduction">
+            我是陈杨，毕业于宁波大学，对前端开发怀着一腔热情。<br>
+            始终坚持在知乎和简书上发布文章，上传代码到github，与同行进行交流学习。<br>
+            能够熟练掌握并运用html&css，JavaScript,jQuery，Vue，React，HTTP等技能，交出优秀作品。
+            <br>同时希望能够在前端路上继续钻研，早日成为资深前端开发工程师。
+        </p>
+        
     </main>
-     <section>        <!--这里用section是告诉自己，新的章节开始了 -->
+     <section class="skills">        <!--这里用section是告诉自己，新的章节开始了 -->
         <h2>技能</h2>
-        <ol>
-            <li>HTML &amp; CSS</li>
-            <li>JavaScript</li>
-            <li>jQuery</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>HTTP</li>
+        <ol class="clearfix">
+            <li>
+                <h3>HTML &amp; CSS</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:90%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <div class="progressBar">
+                        <div class="progress" style="width:80%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>jQuery</h3>
+                <div class="progressBar">
+                        <div class="progress" style="width:60%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Vue</h3>
+                <div class="progressBar">
+                        <div class="progress" style="width:70%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>React</h3>
+                <div class="progressBar">
+                        <div class="progress" style="width:50%"></div>
+                </div>
+
+            </li>
+            <li>
+                <h3>HTTP</h3>
+                <div class="progressBar" >
+                        <div class="progress" style="width:30%"></div>
+                </div>
+
+            </li>
         </ol>
     </section>
-    <section>
+    <section class="portfolio">
         <h2>作品集</h2>
     <nav>
-        <ol>
-            <li>所有</li>
-            <li>框架</li>
-            <li>原生JS&amp;css</li>
+        <ol class="clearfix">
+            <li id="portfolio1">所有</li>
+            <li id="portfolio2">框架</li>
+            <li id="portfolio3" >原生JS&amp;css</li>
         </ol>
+        <div id="portfolioBar" class="Bar state-1">
+            <div class="bar-inner"></div>
+        </div>  <!-- 切记给它命名id,下面script是用id名来寻找的 -->
+        <script>
+            portfolio1.onclick = function() {
+                portfolioBar.className = 'Bar state-1'
+            }    
+            portfolio2.onclick = function() {
+                portfolioBar.className = 'Bar state-2'
+            }
+            portfolio3.onclick = function() {
+                portfolioBar.className = 'Bar state-3'
+            }
+        </script>
     </nav>
-    <div class="jobs">
-        <div class="big"></div>
-        <div class="small"></div>
-        <div class="small"></div>
+    <div class="works" style="height:576px;">
+        <div class="big"style="top:0;left:0;">
+            <img src="images/big.jpg" alt="作品1">
+        </div>
+        <div class="small" style="left:644px; top:0;">
+            <img src="images/small1.jpg" alt="作品2">
+        </div>
+        <div class="small"style="left:644px; top:298px;">
+            <img src="images/small2.jpg" alt="作品3">
+        </div>
     </div>
     </section>
 </body>
