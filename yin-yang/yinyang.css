@@ -10,6 +10,10 @@ body {
     border-style: solid;
     border-radius:50%;
     position: relative;
+    animation-duration: 3s;        /*  指定标签上动画从开始到结束的时间，我们设置为3s */
+    animation-name: spin;
+    animation-iteration-count : infinite;   /* 当我们发现图画只转动了一次，可以添加这句，意思是动画播放无限次 */
+    animation-timing-function: linear;    /* 当动画播放时快时慢，我们可以设置这个播放速度为线性 */
 }
 .yin-yang::before {
     content:"";
@@ -33,3 +37,11 @@ body {
     border: 98px solid #fff;
     border-radius: 50%;
 }
+@keyframes spin {         /* 指定使用名字为spin的关键帧 */
+    from {
+      transform: rotate(0deg)  /* 开始时0度 */
+    }
+    to {
+      transform: rotate(360deg) /* 结束时360度 */
+    }
+  }
