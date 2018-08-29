@@ -17,6 +17,7 @@ a {
 ol , ul {
     list-style: none;
 }
+/* 以下是TopNavBar */
 .TopNavBar {
     margin: 20px 0px;
     position: fixed;    /*加了这个之后，这一个盒子就塌缩，我们只能添加一个宽度 */
@@ -63,6 +64,7 @@ ol , ul {
 .TopNavBar  nav > ul > li > a:hover {
     border-bottom-color: #dc6465; 
 }
+/* 以下是banner */
 .banner {
     height: 515px;
     background-image: url(../images/bg.jpg);
@@ -158,6 +160,7 @@ main .user-card {
     fill: #fff;
     vertical-align: top;
 }
+/* 以下是profileDownload */
 body > main .profileDownload-wrapper {
     text-align: center;
     margin: 36px 0;
@@ -177,6 +180,7 @@ body > main .profileDownload:hover {
     box-shadow: 0px 4px 13px 1px rgba(0,0,0,0.4);
     transition: box-shadow 0.4s;
 }
+/* 以下是selfIntroduction */
 body > main > .selfIntroduction {
     max-width: 940px;
     /* border: 1px solid red; */
@@ -186,6 +190,7 @@ body > main > .selfIntroduction {
     font-size: 22px;
     text-align: center;
 }
+/* 以下是section */
 section.skills,
 section.portfolio {
     max-width: 940px;
