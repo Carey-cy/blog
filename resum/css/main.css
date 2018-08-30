@@ -19,11 +19,20 @@ ol , ul {
 }
 /* 以下是TopNavBar */
 .TopNavBar {
-    margin: 20px 0px;
+    padding: 20px 0px;
     position: fixed;    /*加了这个之后，这一个盒子就塌缩，我们只能添加一个宽度 */
     top: 0;
     left: 0;
     width: 100%;
+    color: #b7b7b7;
+    transition: all 0.5s;
+}
+.TopNavBar.sticky {
+    background: white;
+    padding: 5px 0;
+    z-index: 1;
+    color: #3d4451;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
 }
 .TopNavBar-inner {
     margin: 0 16px;
@@ -42,7 +51,7 @@ ol , ul {
 }
 .TopNavBar  nav > ul {
     list-style: none;
-    margin: 0;
+    margin: 2px;
     padding: 0;
 }
 .TopNavBar  nav > ul > li {
@@ -51,7 +60,7 @@ ol , ul {
    
 }
 .TopNavBar  nav > ul > li > a {
-    color:#b7b7b7;
+    color: inherit;
     font-size: 12px;
     font-weight: 700;
     text-decoration: none;
