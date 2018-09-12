@@ -45,13 +45,13 @@
             <nav style="float: right;" class="menu">  <!--这里是导航栏，英文：navigation bar,所以我们用nav来划分 -->
                 <ul class="clearfix" >
                     <li>
-                        <a href="#">关于</a>
+                        <a href="#siteAbout">关于</a>
                     </li>
                     <li>
-                        <a href="#">技能</a>
+                        <a href="#siteSkills">技能</a>
                     </li>
                     <li>
-                        <a href="#">作品</a>
+                        <a href="#siteWorks">作品</a>
                         <ul class="submenu">
                             <li>作品1</li>
                             <li>作品2</li>
@@ -83,7 +83,7 @@
         <div class="mask"></div>
     </div>
      <main>      <!--这是主体card -->
-        <div class="user-card">  
+        <div class="user-card" id="siteAbout">  
             <div class="picture-text clearfix">
                 <div class="picture ">
                     <img src="images/avatar.jpg" alt="头像" height="347" width="299">     <!--命名时记得用是什么来命名 -->
@@ -148,7 +148,7 @@
         </p>
         
     </main>
-     <section class="skills">        <!--这里用section是告诉自己，新的章节开始了 -->
+     <section class="skills" id="siteSkills">        <!--这里用section是告诉自己，新的章节开始了 -->
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -191,7 +191,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="siteWorks">
         <h2>作品集</h2>
     <nav>
         <ol class="clearfix">
@@ -244,6 +244,17 @@
             }
             liTags[i].onmouseleave = function(x){
                 x.currentTarget.classList.remove('active')
+            }
+        }
+        let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+        for(let i = 0; i < aTags.length; i++){
+            aTags[i].onclick = function(x){
+                x.preventDefault()
+                let a = x.currentTarget
+                let href = a.getAttribute('href')
+                let element = document.querySelector(href)
+                let top = element.offsetTop
+                window.scrollTo(0 , top-80)
             }
         }
     </script>
