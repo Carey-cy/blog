@@ -64,14 +64,30 @@ ol , ul {
     font-size: 12px;
     font-weight: 700;
     text-decoration: none;
-    border-bottom: 3px solid transparent;
     border-top: 3px solid transparent;
     padding: 0 0 8px;
     display: block;
+    position: relative;
     
 } 
-.TopNavBar  nav > ul > li > a:hover {
-    border-bottom-color: #dc6465; 
+.TopNavBar  nav > ul > li > a:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    height: 3px;
+    background: #dc6465;
+    animation: slideBar 0.3s;
+}
+@keyframes slideBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }
 /* 以下是banner */
 .banner {
