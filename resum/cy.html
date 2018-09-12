@@ -42,15 +42,39 @@
             <a class="logo" href="#" alt="logo" style="float: left;">
                 <span class="rs">RS</span><span class="card">card</span>
             </a>
-            <nav style="float: right;">  <!--这里是导航栏，英文：navigation bar,所以我们用nav来划分 -->
+            <nav style="float: right;" class="menu">  <!--这里是导航栏，英文：navigation bar,所以我们用nav来划分 -->
                 <ul class="clearfix" >
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">技能</a></li>
-                    <li><a href="#">作品</a></li>
-                    <li><a href="#">博客</a></li>
-                    <li><a href="#">日历</a></li>
-                    <li><a href="#">联系方式</a></li>
-                    <li><a href="#">其他</a></li>
+                    <li>
+                        <a href="#">关于</a>
+                    </li>
+                    <li>
+                        <a href="#">技能</a>
+                    </li>
+                    <li>
+                        <a href="#">作品</a>
+                        <ul class="submenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                        <ul class="submenu">
+                            <li>知乎</li>
+                            <li>简书</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">日历</a>
+                    </li>
+                    <li>
+                        <a href="#">联系方式</a>
+                    </li>
+                    <li>
+                        <a href="#">其他</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -211,6 +235,15 @@
                 topNavBar.classList.add ('sticky')
             }else{
                 topNavBar.classList.remove('sticky')
+            }
+        }
+        let liTags = document.querySelectorAll('nav.menu > ul > li')
+        for(let i = 0; i < liTags.length; i++){
+            liTags[i].onmouseenter = function(x){
+                x.currentTarget.classList.add('active')
+            }
+            liTags[i].onmouseleave = function(x){
+                x.currentTarget.classList.remove('active')
             }
         }
     </script>

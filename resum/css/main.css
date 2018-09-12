@@ -57,7 +57,7 @@ ol , ul {
 .TopNavBar  nav > ul > li {
     float: left;
     margin: 10px 17px 0px; 
-   
+   position: relative;
 }
 .TopNavBar  nav > ul > li > a {
     color: inherit;
@@ -70,7 +70,7 @@ ol , ul {
     position: relative;
     
 } 
-.TopNavBar  nav > ul > li > a:hover::after {
+.TopNavBar  nav > ul > li.active > a::after {
     content: '';
     display: block;
     position: absolute;
@@ -88,6 +88,32 @@ ol , ul {
     100% {
         width: 100%;
     }
+}
+.TopNavBar li > .submenu {
+    display: none;
+    background-color: #fff; 
+    color: #3d4451;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    position: absolute;
+    right: 0;
+    top: 115%;
+    cursor: pointer;
+}
+.TopNavBar li.active > .submenu {
+    display: block;
+    animation: submenuSlide 0.3s;
+}
+@keyframes submenuSlide {
+    0% {
+        margin-right: 100%;
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+.TopNavBar .submenu > li {
+    white-space: nowrap;
+    padding: 5px 10px;
 }
 /* 以下是banner */
 .banner {
