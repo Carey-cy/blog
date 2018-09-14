@@ -83,7 +83,7 @@
         <div class="mask"></div>
     </div>
      <main>      <!--这是主体card -->
-        <div class="user-card" id="siteAbout">  
+        <div data-x class="user-card" id="siteAbout">  
             <div class="picture-text clearfix">
                 <div class="picture ">
                     <img src="images/avatar.jpg" alt="头像" height="347" width="299">     <!--命名时记得用是什么来命名 -->
@@ -148,7 +148,7 @@
         </p>
         
     </main>
-     <section class="skills" id="siteSkills">        <!--这里用section是告诉自己，新的章节开始了 -->
+     <section data-x class="skills" id="siteSkills">        <!--这里用section是告诉自己，新的章节开始了 -->
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -191,7 +191,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio" id="siteWorks">
+    <section data-x class="portfolio" id="siteWorks">
         <h2>作品集</h2>
     <nav>
         <ol class="clearfix">
@@ -231,12 +231,28 @@
         setTimeout(function(){
             siteWelcome.classList.remove('active')
         },2000)
-        window.onscroll = function(){
+        window.onscroll = function(x){
             if(window.scrollY > 0){
                 topNavBar.classList.add ('sticky')
             }else{
                 topNavBar.classList.remove('sticky')
             }
+
+            let specialTags = document.querySelectorAll('[data-x]')
+            let minIndex = 0
+            for(let i = 1; i < specialTags.length;i++){
+                if(Math.abs(specialTags[i].offsetTop - window.scrollY ) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY))
+                minIndex = i
+            }
+            
+            let id = specialTags[minIndex].id
+            let a = document.querySelector('a[href="#' + id + '"]') // 字符串+变量+字符串 最终获得"#siteAbout"等
+            let li = a.parentNode
+            let brothersAndMe = li.parentNode.children
+            for(let i = 0; i < brothersAndMe.length; i++){
+                brothersAndMe[i].classList.remove('active')
+            }
+            li.classList.add('active')
         }
         let liTags = document.querySelectorAll('nav.menu > ul > li')
         for(let i = 0; i < liTags.length; i++){
@@ -264,6 +280,7 @@
                 let currentTop = window.scrollY
                 let targetTop = top - 80
                 let s = targetTop - currentTop
+                
                 var coords = { y:currentTop };
                 var t = Math.abs((s/100)*500)
                 if(t > 500) {t = 500}
