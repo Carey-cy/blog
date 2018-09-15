@@ -70,7 +70,8 @@ ol , ul {
     position: relative;
     
 } 
-.TopNavBar  nav > ul > li.active > a::after {
+.TopNavBar  nav > ul > li.active > a::after,
+.TopNavBar  nav > ul > li.highlight > a::after {
     content: '';
     display: block;
     position: absolute;
