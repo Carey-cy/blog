@@ -154,13 +154,13 @@
             <li>
                 <h3>HTML &amp; CSS</h3>
                 <div class="progressBar">
-                    <div class="progress" style="width:90%"></div>
+                    <div class="progress" style="width:70%"></div>
                 </div>
             </li>
             <li>
                 <h3>JavaScript</h3>
                 <div class="progressBar">
-                        <div class="progress" style="width:80%"></div>
+                        <div class="progress" style="width:75%"></div>
                 </div>
             </li>
             <li>
@@ -172,7 +172,7 @@
             <li>
                 <h3>Vue</h3>
                 <div class="progressBar">
-                        <div class="progress" style="width:70%"></div>
+                        <div class="progress" style="width:65%"></div>
                 </div>
             </li>
             <li>
@@ -237,7 +237,7 @@
             specialTags[i].classList.add('offset')
             }
         setTimeout(function(){
-            yyy()
+            findClosest()
         },1000)
         window.onscroll = function(x){
             if(window.scrollY > 0){
@@ -245,9 +245,9 @@
             }else{
                 topNavBar.classList.remove('sticky')
             }
-            yyy()
+            findClosest()
         }
-        function yyy(){
+        function findClosest(){
              // minIndex 就是离窗口最近的那个标签
              let specialTags = document.querySelectorAll('[data-x]')
             let minIndex = 0
